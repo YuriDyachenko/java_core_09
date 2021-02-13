@@ -11,6 +11,8 @@ MyArrayDataException и вывести результат расчета.
 */
 public class Main {
 
+    public static final int RIGHT_SIZE = 4;
+
     public static void main(String[] args) {
 
         String[][] rightArray = {
@@ -74,11 +76,11 @@ public class Main {
 
         //проверка всех возможных "неправильных размеров"
         //сначала число строк
-        if (a.length != 4)
+        if (a.length != RIGHT_SIZE)
             e.append(String.format("число строк = %d", a.length));
         //число элементов в каждой строке
         for (int i = 0; i < a.length; i++) {
-            if (a[i].length != 4)
+            if (a[i].length != RIGHT_SIZE)
                 e.append(String.format("число элементов в строке %d = %d", i + 1, a[i].length));
         }
         //а уж если в нем что-то накопилось, то создаем именно нужное исключение
